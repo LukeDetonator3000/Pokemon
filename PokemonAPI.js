@@ -9,11 +9,16 @@ xhr.addEventListener("load", function(){
 	let $containerCartas = document.getElementById('container')
 	
 	for(let i=0; i<arrayDePokemons.length; i++){
+		
 		var autorEl = document.createElement('h3');
 		var autorDaCarta = document.createTextNode(arrayDePokemons[i].artist);
 		autorEl.appendChild(autorDaCarta);
 		$containerCartas.appendChild(autorEl);
 
+		var textoEl = document.createElement('h3');
+		var textoDaCarta = document.createTextNode(arrayDePokemons[i].text);
+		textoEl.appendChild(textoDaCarta);
+		$containerCartas.appendChild(textoEl);
 		
 		var tituloEl = document.createElement('h3');
 		var nomeDaCarta = document.createTextNode(arrayDePokemons[i].name);
