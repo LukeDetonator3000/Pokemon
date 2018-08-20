@@ -10,7 +10,11 @@ xhr.addEventListener("load", function(){
 	
 	for(let i=0; i<arrayDePokemons.length; i++){
 
-	
+		var srcEl = document.createElement('img')
+		var imagemDaCarta = document.createAttribute('src');
+		imagemDaCarta.value = arrayDePokemons[i].imageUrl;
+		srcEl.setAttributeNode(imagemDaCarta);
+		$containerCartas.appendChild(srcEl);
 
 		var tipoEl = document.createElement('h3');
 		var tipoDaCarta = document.createTextNode(arrayDePokemons[i].types);
